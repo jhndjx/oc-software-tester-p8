@@ -1,0 +1,30 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 20px 50px 0 50px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .layout-container {
+        flex-direction: column;
+        min-height: auto;
+        background-color: #fff;
+        padding: 20px 20px 0 20px;
+    }
+    
+    .main-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

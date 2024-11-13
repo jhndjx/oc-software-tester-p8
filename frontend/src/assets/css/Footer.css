@@ -1,0 +1,23 @@
+.footer {
+    width: 100vw;
+    left: 0;
+    box-sizing: border-box;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+.logo-footer img {
+    margin-top: 30px;
+    height: 30px;
+}

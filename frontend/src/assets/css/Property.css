@@ -1,0 +1,259 @@
+.property-details {
+  background-color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+.property-title-location {
+  flex: 2;
+  text-align: left;
+}
+
+.property-title-location h1 {
+  color: #ff6060;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.property-title-location p {
+  margin: 0;
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+}
+
+.host-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  color: #ff6060;
+}
+
+.host-info img {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.tags-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.property-details .tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.property-details .tags span {
+  background-color: #ff6060;
+  color: white;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.star-rating i {
+  font-size: 1.5rem;
+}
+
+.star-rating .filled {
+  color: #ff6160;
+}
+
+.star-rating .empty {
+  color: #dcdcdc;
+}
+
+.description-equipment-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.description, .equipments {
+  flex: 1;
+  border-radius: 8px;
+}
+
+.description {
+  margin-right: 10px;
+}
+
+.equipments {
+  margin-left: 10px;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: left;
+  padding: 5px 15px 5px 5px;
+}
+
+.collapsible-header:hover {
+  background-color: #ff4b4b;
+}
+
+.collapsible-header span {
+  flex: 1;
+}
+
+.collapsible-header i {
+  font-size: 1.2rem;
+}
+
+.collapsible-content {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #444;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.collapsible.open .collapsible-content {
+  height: auto;
+}
+
+.collapsible-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.collapsible-content ul li {
+  padding: 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .property-details {
+      padding: 10px;
+      gap: 15px;
+  }
+
+  .tags-rating-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 10px;
+  }
+
+  .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+  }
+
+  .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+  }
+
+  .host-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: flex-end;
+  }
+
+  .description-equipment-container {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+  }
+
+  .collapsible {
+      width: 100%;
+  }
+
+  .property-title-location h1 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .property-title-location p {
+      font-size: 0.9rem;
+  }
+
+  .host-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+  }
+
+  .property-details .tags span {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      background-color: #ff6160;
+      color: white;
+      border-radius: 5px;
+  }
+
+  .star-rating i {
+      font-size: 1rem;
+      color: #ff6160;
+  }
+
+  .collapsible-header {
+      padding: 8px;
+      font-size: 1rem;
+      background-color: #ff6160;
+      color: white;
+      border-radius: 5px;
+  }
+
+  .collapsible-content {
+      font-size: 0.9rem;
+      color: #444;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .description, .equipments {
+    margin: 0;
+    padding: 0;
+  }
+}
