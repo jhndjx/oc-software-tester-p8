@@ -7,10 +7,10 @@ import NotFound from './NotFound';
 function AppRouter() {
     return (
         <Routes>
-            <Route path="/" element={<Properties />} />
-            <Route path="/location/:id" element={<Property />} />
-            <Route path="/a-propos" element={<About />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<Properties/>}/>
+            <Route path="/location/:id" element={<Property/>}/>
+            <Route path="/a-propos" element={<About/>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     );
 }

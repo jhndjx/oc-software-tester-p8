@@ -2,39 +2,40 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 15px 0;
     background-color: white;
     color: black;
 }
 
 .logo img {
-    height: 60px;
+    height: 50px;
 }
 
 .navigation {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: black;
     text-decoration: none;
+    padding-bottom: 1px;
+    transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
     color: black;
     text-decoration: underline;
 }
 
 .banner-container {
-    height: 180px;
     width: 100%;
     max-width: 1280px;
     margin: 20px auto;
-    background-color: #fff;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
+    border-radius: 25px;
 }
 
 .overlay {
@@ -43,13 +44,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    border-radius: 25px;
+    border-radius: inherit;
 }
+
 .banner {
-    border-radius: 25px;
-    height: 180px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -60,23 +61,73 @@
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
 }
 
 .banner h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     position: relative;
-    z-index: 2;
-    font-size: 40px;
-    text-shadow: 1px 1px 0 black,
-    -1px -1px 0 black,
-    1px -1px 0 black,
-    -1px 1px 0 black;
+    z-index: 3;
+    display: inline;
+}
+
+.responsive-break {
+    display: inline;
 }
 
 @media (max-width: 1024px) {
+    .logo img {
+        height: 45px;
+    }
+
     .nav-link {
         font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .banner {
+        height: 150px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
     }
 }
 
+@media (max-width: 768px) {
 
+    .navigation {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
 
+    .nav-link {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        padding: 5px 0;
+    }
+
+    .banner-container {
+        margin-bottom: 0;
+    }
+
+    .banner {
+        height: 120px;
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .banner h1 {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .responsive-break {
+        display: block; /* Force le retour à la ligne */
+        margin-top: 5px; /* Optionnel, pour un léger espacement */
+    }
+}

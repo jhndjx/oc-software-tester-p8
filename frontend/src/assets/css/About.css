@@ -1,78 +1,40 @@
 .about-details {
-  background-color: #fff;
-  padding: 20px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 1200px;
-  width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .about-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.collapsible-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ff6060;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  text-align: left;
-  padding: 5px 15px 5px 5px;
-}
-
-.collapsible-header:hover {
-  background-color: #ff4b4b;
-}
-
-.collapsible-header span {
-  flex: 1;
-}
-
-.collapsible-header i {
-  font-size: 1.2rem;
-}
-
-.collapsible-content {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 8px;
-  font-size: 1rem;
-  color: #444;
-  display: block;
-  height: 0;
-  overflow: hidden;
-  transition: height 0.5s ease;
-  text-align: justify;
-}
-
-.collapsible.open .collapsible-content {
-  height: auto;
-}
-
-.collapsible-content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.collapsible-content ul li {
-  padding: 5px 0;
-}
-
-@media (max-width: 768px) {
-  .about-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .about-details {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .collapsible-header {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .collapsible-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

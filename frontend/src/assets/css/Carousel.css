@@ -5,6 +5,7 @@
   position: relative;
   width: 100%;
   max-width: 100%;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -13,6 +14,7 @@
   height: 350px;
   object-fit: cover;
   border-radius: 25px;
+  transition: opacity 0.5s ease;
 }
 
 .carousel-left, .carousel-right {
@@ -59,5 +61,11 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-indicator {
+    display: none;
   }
 }
